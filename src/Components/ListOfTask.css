@@ -1,0 +1,90 @@
+.taskSections {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+input {
+  color: black;
+}
+
+h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.listOfTask {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  list-style: none;
+  background-color: rgba(226, 226, 226, 0.575);
+  border-radius: 20px;
+  width: 450px;
+  padding: 15px;
+  align-items: center;
+  height: 35px;
+  margin-left: -40px;
+  margin-bottom: 15px;
+}
+
+.listOfTask .taskText {
+  color: black;
+  font-weight: 500;
+  margin: 20px;
+  width: 350px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.listOfTask button {
+  border-radius: 20px;
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.listOfTask .completed-green {
+  background-color: rgba(0, 128, 0, 0.247);
+  color: green;
+  width: 150px;
+}
+
+.listOfTask .not-completed {
+  background-color: rgba(255, 0, 0, 0.315);
+  color: rgb(255, 0, 0);
+  width: 150px;
+}
+
+.listOfTask .edit {
+  width: 80px;
+  background-color: rgba(0, 70, 128, 0.226);
+  color: rgba(0, 70, 128, 0.801);
+  font-size: 2px;
+}
+
+.delete {
+  width: 80px;
+  background-color: rgba(255, 0, 0, 0.212);
+  color: rgba(255, 0, 0, 0.637);
+  font-size: 2px;
+}
+
+.delete:hover {
+  background-color: rgba(255, 0, 0, 0.678);
+  transition: all 0.3s ease-in-out;
+}
+
+.save {
+  background-color: rgba(0, 128, 0, 0.247);
+  color: green;
+}
+
+.cancel {
+  background-color: rgba(255, 0, 0, 0.212);
+  color: rgba(255, 0, 0, 0.637);
+}
