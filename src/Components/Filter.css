@@ -1,0 +1,12 @@
+.selectSection {
+  border: none;
+  outline: none;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  border-radius: 20px;
+  padding-left: 10px;
+  height: 30px;
+  width: 150px;
+  background-color: rgba(0, 81, 255, 0.548);
+}

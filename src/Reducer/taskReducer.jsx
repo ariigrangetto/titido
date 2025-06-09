@@ -17,6 +17,7 @@ export default function taskReducer(state, action){
         {
           id: crypto.randomUUID(),
           text: payload.text, 
+          completed: false
         }];
         updateLocalStorage(newState)
         return newState;

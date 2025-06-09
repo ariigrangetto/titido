@@ -3,7 +3,7 @@ import { TaskContext } from "../Hooks/useTask"
 import "./ListOfTask.css"
 import { Pencil } from 'lucide-react';
 import { Trash2 } from 'lucide-react';
-
+import Filter from "./Filter";
 
 export default function ListOfTask ({tasks}) {
     const {deleteTask, editTask, toggleTaskCompleted} = useContext(TaskContext);
@@ -24,7 +24,10 @@ export default function ListOfTask ({tasks}) {
     }
 
     return(
+        <>
+        <Filter tasks={tasks}/>
         <div className="taskSections">
+            
             <ul >
             {tasks.map((task) =>
             <li key={task.id} className="listOfTask">
@@ -49,7 +52,7 @@ export default function ListOfTask ({tasks}) {
             )}
         </ul>
         </div>
-        
+        </>
     )
 
 }

@@ -4,19 +4,22 @@ import Task from './Components/Task';
 import  { TaskContext } from './Hooks/useTask';
 import { MousePointerClick } from 'lucide-react';
 import { BookCheck } from 'lucide-react';
+import useFilter from "./Hooks/useFilter"
 
 
 function App() {
   const {tasks, addTask} = useContext(TaskContext)
   const [newTask, setNewTask] = useState("")
 
+  const {filterTask} = useFilter()
+
+  const filteredTask = filterTask(tasks)
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addTask({text: newTask})
     setNewTask("")
   }
-
 
   const handleChange = (e) =>{
     const newTasks = e.target.value;
@@ -47,9 +50,10 @@ function App() {
       </form>
     </section>
     <div className='listTask'>
-      <Task tasks={tasks}/>
+      
+         <Task tasks={filteredTask}/>
+      
     </div>
-    
     </>
   )
 }
