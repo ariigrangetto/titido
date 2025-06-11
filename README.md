@@ -1,7 +1,23 @@
-<h1>📖 Titido</h1>
+# 🎀 Titido
 
-This is a simple to-do app built with React. I used useReducer and useContext to manage the state globally. It lets you add, edit, and delete tasks easily. I built it to practice more advanced state management in React and keep the code clean and scalable.
+An app built with React to organize tasks, with filters for completed and uncompleted ones. It allows editing and deleting each task.
 
-![Captura de pantalla (113)](https://github.com/user-attachments/assets/d89a1513-4704-4e0f-a8d3-5d04244ae548)
-![Captura de pantalla (112)](https://github.com/user-attachments/assets/367f97b5-f30a-4765-afe2-a6ab83640ead)
+## 📝 Technologies
+
+- `React`
+- `CSS`
+- `useReducer`
+- `useContext`
+- `useId` 
+
+## 🧠 The Process
+
+The purpose of this app was to continue deepening my knowledge of React hooks and to strengthen my understanding of array immutability. The main steps included creating an input field to add new tasks, displaying them with filtering options (`completed` / `not completed`), and enabling users to edit or delete tasks.  
+Each task is persisted using `localStorage`.
+
+## 🌆 Preview 
+
+![Captura de pantalla (115)](https://github.com/user-attachments/assets/54891669-5fc8-450d-959c-3cdd33625264)
+![Captura de pantalla (114)](https://github.com/user-attachments/assets/d6e99589-efc1-4ec1-9131-d31aa203665e)
+
 
