@@ -1,8 +1,7 @@
-import { createContext, useReducer } from "react";
+import { useReducer } from "react";
 import taskReducer, { initialState } from "../Reducer/taskReducer";
-import React from "react";
 
-export function useTask() {
+export function useTaskReducer() {
   const [tasks, dispatch] = useReducer(taskReducer, initialState);
 
   const addTask = (task) =>
@@ -26,20 +25,8 @@ export function useTask() {
   const toggleTaskCompleted = (id) =>
     dispatch({
       type: "TASK_COMPLETED",
-      payload: { id } ,
+      payload: { id },
     });
 
   return { tasks, addTask, deleteTask, editTask, toggleTaskCompleted };
-}
-
-export const TaskContext = createContext();
-
-export default function TaskProvider({ children }) {
-  const { tasks, addTask, deleteTask, editTask, toggleTaskCompleted } = useTask();
-
-  return (
-    <TaskContext.Provider value={{ tasks, addTask, deleteTask, editTask, toggleTaskCompleted }}>
-      {children}
-    </TaskContext.Provider>
-  );
 }

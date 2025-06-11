@@ -1,14 +1,14 @@
-import React, { useContext, useState } from 'react'
+import React, {useState } from 'react'
 import './App.css'
 import Task from './Components/Task';
-import  { TaskContext } from './Hooks/useTask';
+import  { useTask } from './Hooks/useTask';
 import { MousePointerClick } from 'lucide-react';
 import { BookCheck } from 'lucide-react';
 import useFilter from "./Hooks/useFilter"
 
 
 function App() {
-  const {tasks, addTask} = useContext(TaskContext)
+  const {tasks, addTask} = useTask();
   const [newTask, setNewTask] = useState("")
 
   const {filterTask} = useFilter()
@@ -35,7 +35,7 @@ function App() {
 
     
     <section className='formSection'>
-      <h3>Add a new task!</h3>
+      <h2>📝 Add a new task!</h2>
       <form onSubmit={handleSubmit}>
         <input 
         type="text"

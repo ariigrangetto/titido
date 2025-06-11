@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react"
-import { TaskContext } from "../Hooks/useTask"
+import React, {useState } from "react"
 import "./ListOfTask.css"
 import { Pencil } from 'lucide-react';
 import { Trash2 } from 'lucide-react';
 import Filter from "./Filter";
+import { useTask } from "../Hooks/useTask";
 
 export default function ListOfTask ({tasks}) {
-    const {deleteTask, editTask, toggleTaskCompleted} = useContext(TaskContext);
+    const {deleteTask, editTask, toggleTaskCompleted} = useTask();
 
     const [editId, setEditId] = useState(null);
     const [editText, setEditText] = useState("");
@@ -43,9 +43,9 @@ export default function ListOfTask ({tasks}) {
                 ) :(
                 <>
                  <p className="taskText">{task.text}</p>
-                <button className={task.completed ? "completed-green" : "not-completed"} onClick={() => toggleTaskCompleted(task.id)}>{task.completed ? "completed" : "not completed"}</button>
-                <button className="delete" onClick={() => deleteTask(task.id)}><Trash2/></button>
-                <button className="edit" onClick={() => startEdit(task)}><Pencil/></button>
+                <button className={task.completed ? "completed-green" : "not-completed"} name="complete task button" onClick={() => toggleTaskCompleted(task.id)}>{task.completed ? "completed" : "not completed"}</button>
+                <button className="delete" name="delete button" onClick={() => deleteTask(task.id)}><Trash2/></button>
+                <button className="edit" name="edit button" onClick={() => startEdit(task)}><Pencil/></button>
                 </>
                 )}
             </li> 
